@@ -8,8 +8,7 @@
 }
 
 body {
-    height: 900vh;
-    background: #46464d;
+    height: 900vh;    
 }
 
 nav.menu-lateral {
@@ -17,16 +16,16 @@ nav.menu-lateral {
     height: 100%;
     background-color: #202020;
     padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #02108d;
+    box-shadow: 3px 0 0 #8d0202;
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: .5s;
     
 }
 
-nav.menu-lateral:hover{
+nav.menu-lateral.expandir{
     width: 300px;
 }
 
@@ -50,8 +49,12 @@ ul li.item-menu{
     transition: 1s;
 }
 
+ul li.ativo{
+    background-color: #8d0202;
+}
+
 ul li.item-menu:hover{
-    background: #02108d;
+    background: #8d0202;
 }
 
 ul li.item-menu a {
@@ -65,7 +68,14 @@ ul li.item-menu a {
 }
 
 ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: 1s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
     margin-left: 40px;
+    opacity: 1;
 }
 
 ul li.item-menu a .icon > i {
